@@ -22,7 +22,7 @@ void loop() {
   lcd.clear();
   dataADC=analogRead(0);
   voltage=dataADC*1.1/1023;
-  tekanan=(voltage*/0.045)+0.2
+  tekanan=(voltage/0.045)+0.2;
   lcd.setCursor(0, 0);
   lcd.print("Time:");
   lcd.setCursor(5, 0);
@@ -35,9 +35,9 @@ void loop() {
   lcd.print("Voltage:");
   lcd.setCursor(8, 2);
   lcd.print(voltage);
-   lcd.setCursor(0, 3);
+  lcd.setCursor(0, 3);
   lcd.print("Tekanan:");
   lcd.setCursor(8, 3);
-  lcd.print(Tekanan);
+  lcd.print(tekanan);
   delay(250);
 }
